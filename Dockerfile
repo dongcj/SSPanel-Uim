@@ -4,6 +4,9 @@ LABEL maintainer="Indexyz <indexyz@protonmail.com>"
 COPY . /var/www
 WORKDIR /var/www
 
+RUN apt update \
+    && apt -y install vim iputils-ping
+
 RUN cp config/.config.example.php config/.config.php && \
     chmod -R 755 storage && \
     chmod -R 777 /var/www/storage/framework/smarty/compile/ && \

@@ -15,7 +15,7 @@ $_ENV['version'] = '1';	//仅当涉及【需要修改config以外的文件】时
 
 
 //基本设置--------------------------------------------------------------------------------------------
-$_ENV['key'] = '1145141919810';						//!!! 瞎 jb 修改此key为随机字符串确保网站安全 !!!
+$_ENV['key'] = '';						//!!! 瞎 jb 修改此key为随机字符串确保网站安全 !!!
 $_ENV['debug'] =  false;								//正式环境请确保为 false
 $_ENV['appName'] = 'sspanel';							//站点名称
 $_ENV['baseUrl'] = 'http://url.com';					//站点地址
@@ -24,7 +24,7 @@ $_ENV['muKey'] = 'default_mu_key';								//用于校验魔改后端请求，可
 $_ENV['db_driver'] = 'mysql';							//数据库程序
 // 数据库网络地址(在本机上推荐用 Unix Socket, 与下面二选一, 不用则留空)
 // 例: localhost(可解析主机名), 127.0.0.1(IP 地址)
-$_ENV['db_host'] = '';
+$_ENV['db_host'] = 'sspanel-mysql';
 // 数据库 Unix Socket 地址(优先级高于网络地址, 与上面二选一, 不用则留空)
 // 例: /var/run/mysqld/mysqld.sock(绝对地址)
 $_ENV['db_socket'] = '';

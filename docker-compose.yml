@@ -20,7 +20,7 @@ services:
           MYSQL_ROOT_PASSWORD: sspanel
         volumes:
           - /opt/sspanel/mysql:/var/lib/mysql
-          - /opt/sspanel/code/sql/glzjin_all.sql:/docker-entrypoint-initdb.d/sspanel.sql
+          - /opt/sspanel/sql/glzjin_all.sql:/docker-entrypoint-initdb.d/sspanel.sql
         command: ['mysqld', '--character-set-server=utf8mb4']          
         networks:
             - sspanel                          

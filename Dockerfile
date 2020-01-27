@@ -7,7 +7,9 @@ WORKDIR /var/www
 RUN apt update \
     && apt -y install vim iputils-ping
 
-RUN cp config/.config.example.php config/.config.php && \
+RUN apt update && \
+    apt -y install vim iputils-ping && \
+    cp config/.config.example.php config/.config.php && \
     chmod -R 755 storage && \
     chmod -R 777 /var/www/storage/framework/smarty/compile/ && \
     curl -SL https://getcomposer.org/installer -o composer-setup.php && \
